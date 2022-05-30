@@ -1,0 +1,27 @@
+.form-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0;
+       
+}
+.form-style{
+display: flex;
+flex-direction: column;
+border: 0.5px solid gray;
+padding: 1.5rem;
+background-color: whitesmoke;
+}
+.form-style input, button{
+        height: 2.5rem;
+        width: 100%;
+        outline: none;
+        border: none;
+         
+}
+p{
+ color: red;
+}
+label{
+        padding: 0.2rem 0;
+}
