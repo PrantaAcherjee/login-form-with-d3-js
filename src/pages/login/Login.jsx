@@ -6,6 +6,8 @@ const Login = () => {
   const [login,setLogin]=useState({});
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const [checked, setChecked] = useState(false)
+  const handleClick = () => setChecked(!checked)
 
   const handleOnChange=e=>{
    const field=e.target.name;
@@ -85,15 +87,18 @@ const Login = () => {
               <input  onChange={handleOnChange} value={login.number} type="number" name='number'/>
               <p>{formErrors.number}</p>
               <div style={{display:'flex',justifyContent:'flex-start',alignItems:'center'}} >
-              <div><input type="checkbox"/></div>
+
+              <div><input onClick={handleClick} checked={checked} type="checkbox" /></div>
+
               <div style={{paddingLeft:'0.5rem'}}>I read and agree with terms and conditions</div>
               </div>
-
-               
+             {
+               checked?<button type='submit' style={{background:'darkcyan',color:'white'}}>Create an account</button>:
+               <button type='submit' disabled style={{background:'cyan',color:'white'}}>Create an account</button> 
+             }
               
-              <button type='submit' style={{background:'cyan',color:'white'}}>Create an account</button> 
-               
-              
+            
+            
           </form>
               
         </div>
