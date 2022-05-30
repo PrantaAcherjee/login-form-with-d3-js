@@ -90,7 +90,7 @@ const Login = () => {
 
               <div><input onClick={handleClick} checked={checked} type="checkbox" /></div>
 
-              <div style={{paddingLeft:'0.5rem'}}>I read and agree with terms and conditions</div>
+              <div style={{paddingLeft:'0.5rem',color:'blue'}}>I read and agree with terms and conditions</div>
               </div>
              {
                checked?<button type='submit' style={{background:'darkcyan',color:'white'}}>Create an account</button>:
